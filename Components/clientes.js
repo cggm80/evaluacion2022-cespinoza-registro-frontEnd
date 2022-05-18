@@ -31,7 +31,7 @@ const Clientes = ({ clientes }) => {
                         })()}
                         </div>
                         <div className="col boton">
-                            <Link href="/editar">
+                            <Link href={`/editar/${encodeURIComponent(cliente.codigo)}`}>
                              <a>Editar</a>
                             </Link>
                         </div>
