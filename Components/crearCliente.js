@@ -11,7 +11,7 @@ const CrearCliente = () => {
     const [email, setEmail] = useState('')
     const [cedula, setCedula] = useState('');
     const [telefono, setTelefono] = useState('');
-    const [estado, setEstado] = useState('');
+    const [estado, setEstado] = useState('A');
 
     useEffect(() => {
         const items = JSON.parse(window.localStorage.getItem('clientes'));
@@ -73,7 +73,7 @@ const CrearCliente = () => {
     }    
 
     return (
-        <seccion className="crearCliente">
+        <section className="crearCliente">
             <form className="form" onSubmit={onSubmit}>
                 <div className="input">
                     <input type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} />
@@ -88,8 +88,8 @@ const CrearCliente = () => {
                     <input type="text" placeholder="Teléfono" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                 </div>
                 <div className="input">
-                    <select onChange={(e) => setEstado(e.target.value)}>
-                        <option value="A" selected="selected">Activo</option>
+                    <select onChange={(e) => setEstado(e.target.value) }>
+                        <option value="A">Activo</option>
                         <option value="I">Inactivo</option>
                         <option value="P">Pendiente</option>
                         <option value="D">Desactivado</option>
@@ -102,7 +102,7 @@ const CrearCliente = () => {
                     </Link>
                 </div>
             </form>
-        </seccion>
+        </section>
     );
 }
 
