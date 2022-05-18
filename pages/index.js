@@ -16,6 +16,8 @@ const Index = () => {
         .then((response) => response.json())
         .then((actualData) => {
           window.localStorage.setItem('clientes', JSON.stringify(actualData));
+          const carga_clientes = JSON.parse(window.localStorage.getItem('clientes'));
+          cargaUsuarios(carga_clientes)
         })
         .catch((err) => {
           console.log(err.message);
@@ -26,10 +28,10 @@ const Index = () => {
   }, []);
 
 
-  useEffect(() => {
-    const carga_clientes = JSON.parse(window.localStorage.getItem('clientes'));
-    setClientes(carga_clientes);
-  }, []);
+  const cargaUsuarios = (usurios) => {
+    //const carga_clientes = JSON.parse(window.localStorage.getItem('clientes'));
+    setClientes(usurios);
+  }
 
   
 
@@ -38,13 +40,12 @@ const Index = () => {
       <Layout>
         <TituloClientes />
         <TextoBoton texto="Escoja un cliente para visualizar los detalles" boton={true} />
-
         {
-          clientes.length > 0 ?
-            (<Clientes clientes={clientes} />) :
-            ('Usuarios no encontrados!')
+          clientes && clientes.length > 0 ?
+            <Clientes clientes={clientes} /> :
+            <h2>Usuarios no encontrados!</h2>
         }
-        <p className="count">{clientes.length > 0 ? clientes.length + ' usuarios' : '0 usuarios'}</p>
+        <p className="count">{clientes && clientes.length > 0 ? clientes.length + ' usuarios' : '0 usuarios'}</p>
       </Layout>
     </>
   );
