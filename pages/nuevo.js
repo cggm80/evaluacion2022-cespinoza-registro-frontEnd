@@ -1,7 +1,7 @@
-import Layout from '../Components/layout'
-import TituloClientes from '../Components/tituloClientes'
-import TextoBoton from '../Components/textoBoton'
-import CrearCliente from '../Components/crearCliente'
+import Layout from '../Components/Layout'
+import TituloClientes from '../Components/TituloClientes'
+import TextoBoton from '../Components/TextoBoton'
+import CrearCliente from '../Components/CrearCliente'
 
 const Nuevo = () => {
   return (

@@ -3,30 +3,30 @@ export default function handler(req, res) {
     { 
         name: 'Monica Enriquez',
         email: 'menriquez@abc.com',
-        codigo: '123.456.789-00',
-        celular: '(593) 9356-8569',
-        status: 'A'
+        cedula: '123.456.789-00',
+        telefono: '(593) 9356-8569',
+        estado: 'A'
     },
     { 
         name: 'Gabriel Simbaña',
         email: 'gsimbana@abc.com',
-        codigo: '123.456.789-01',
-        celular: '(593) 9356-8569',
-        status: 'I'
+        cedula: '123.456.789-01',
+        telefono: '(593) 9356-8569',
+        estado: 'I'
     },
     { 
         name: 'Christian Garcia',
         email: 'cgarcia@abc.com',
-        codigo: '123.456.789-02',
-        celular: '(593) 9356-8569',
-        status: 'P'
+        cedula: '123.456.789-02',
+        telefono: '(593) 9356-8569',
+        estado: 'P'
     },
     { 
         name: 'Carlos Guzman',
         email: 'cguzman@abc.com',
-        codigo: '123.456.789-03',
-        celular: '(593) 9356-8569',
-        status: 'D'
+        cedula: '123.456.789-03',
+        telefono: '(593) 9356-8569',
+        estado: 'D'
     },
 ])
 }

@@ -1,9 +1,9 @@
 import {  useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Layout from '../../Components/layout'
-import TituloClientes from '../../Components/tituloClientes'
-import TextoBoton from '../../Components/textoBoton'
-import EditarCliente from '../../Components/editarCliente'
+import Layout from '../../Components/Layout'
+import TituloClientes from '../../Components/TituloClientes'
+import TextoBoton from '../../Components/TextoBoton'
+import EditarCliente from '../../Components/EditarCliente'
 import Swal from "sweetalert2"
 
 const Editar = () => {
@@ -16,7 +16,7 @@ const Editar = () => {
         const items = JSON.parse(localStorage.getItem('clientes'));
         if (items) {
             items.map(x => {
-                if(x.codigo == cedula) {
+                if(x.cedula == cedula) {
                     setCliente(x)
                 }
             })

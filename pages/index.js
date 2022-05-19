@@ -1,15 +1,14 @@
 import {  useEffect, useState } from 'react'
-import Layout from '../Components/layout'
-import TituloClientes from '../Components/tituloClientes'
-import TextoBoton from '../Components/textoBoton'
-import Clientes from '../Components/clientes'
+import Layout from '../Components/Layout'
+import TituloClientes from '../Components/TituloClientes'
+import TextoBoton from '../Components/TextoBoton'
+import Clientes from '../Components/Clientes'
 
 const Index = () => {
 
   const [clientes, setClientes] = useState([]);
-
+  //CARGA DE DATOS DESDE UNA API
   useEffect(() => {
-
     const items = JSON.parse(localStorage.getItem('clientes'));
     if (!items) {
       fetch(`http://localhost:3000/api/users`)
@@ -29,7 +28,6 @@ const Index = () => {
 
 
   const cargaUsuarios = (usurios) => {
-    //const carga_clientes = JSON.parse(window.localStorage.getItem('clientes'));
     setClientes(usurios);
   }
 
