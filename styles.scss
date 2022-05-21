@@ -234,3 +234,15 @@ main {
     }
 }
 //FOOTER
+
+//RESPONSIVE
+@media (max-width: 768px) {
+    main .clientes ul li {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }  
+    main .clientes ul li .col {
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+}
